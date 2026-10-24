@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  examples:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+          - examples/Rainbow
+          - examples/ColorOrderTest
+          - examples/NeoPixelStyle
+          - examples/FastLEDDemo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PlatformIO
+        run: pip install platformio
+      - name: Build ${{ matrix.example }}
+        run: >
+          pio ci --board esp32dev --lib .
+          --project-option="platform=https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip"
+          --project-option="framework=arduino"
+          --project-option="lib_deps=fastled/FastLED@^3.10.0"
+          ${{ matrix.example }}

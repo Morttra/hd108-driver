@@ -1,0 +1,31 @@
+# Syntax coloring for the Arduino IDE
+HD108Strip	KEYWORD1
+HD108NeoPixel	KEYWORD1
+HD108GainController	KEYWORD1
+ColorOrder	KEYWORD1
+
+begin	KEYWORD2
+end	KEYWORD2
+show	KEYWORD2
+setPixel	KEYWORD2
+setPixel8	KEYWORD2
+getPixel	KEYWORD2
+fill	KEYWORD2
+clear	KEYWORD2
+setGlobalGain	KEYWORD2
+globalGain	KEYWORD2
+setPixelGain	KEYWORD2
+setColorOrder	KEYWORD2
+setOffset	KEYWORD2
+size	KEYWORD2
+gamma16	KEYWORD2
+hsv2rgb16	KEYWORD2
+lerp16	KEYWORD2
+setPixelColor	KEYWORD2
+getPixelColor	KEYWORD2
+setBrightness	KEYWORD2
+getBrightness	KEYWORD2
+numPixels	KEYWORD2
+Color	KEYWORD2
+setGamma	KEYWORD2
+strip	KEYWORD2
